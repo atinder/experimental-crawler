@@ -1,10 +1,10 @@
 {
-  "name": "crawler",
+  "name": "shopping-crawler",
   "version": "1.0.0",
   "description": "CLI crawler tool for shopping.com",
   "main": "index.js",
   "bin": {
-    "crawler": "./index.js"
+    "shopping-crawler": "./index.js"
   },
   "scripts": {
     "test": "index_test.js"
