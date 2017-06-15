@@ -1,0 +1,19 @@
+{
+  "name": "crawler",
+  "version": "1.0.0",
+  "description": "CLI crawler tool for shopping.com",
+  "main": "index.js",
+  "bin": {
+    "crawler": "./index.js"
+  },
+  "scripts": {
+    "test": "index_test.js"
+  },
+  "author": "Atinder Singh",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "osmosis": "^1.1.4",
+    "q": "^1.5.0"
+  }
+}
