@@ -12,6 +12,9 @@ module.exports  = {
       console.log('Sorry, No products found.')
     }
   },
+  /**
+   * Prints message to console when supplied with invalid arguments.
+   */
   invalidArgs: function() {
     console.log('Please enter keyword or keyword and page. Use ' + pjson.name +
       ' --help for examples')
@@ -21,7 +24,6 @@ module.exports  = {
    * @param {!Array<!Object<string, string>>}
    */
   results: function(products) {
-    console.log(products)
     if (products.length > 0) {
       console.log(products)
     } else {

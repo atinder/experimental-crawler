@@ -6,7 +6,7 @@ module.exports = {
    * Base URL for scraping data.
    * @type {string}
    */
-  baseUrl: 'http://www.shopping.com/products?KW=',
+  baseUrl: 'http://www.shopping.com/products',
   /**
    * Product container css selector
    * @type {string}
@@ -32,7 +32,7 @@ module.exports = {
   getCount(keyword) {
     var deferred = Q.defer();
     osmosis
-    .get(this.baseUrl + keyword)
+    .get(this.baseUrl + '?KW=' + keyword)
     .set('total', osmosis.find('span.numTotalResults'))
     .then(function(context, data) {
       let regExp = /Results\s\d+\s-\s(\d+)\sof\s\d+/
@@ -53,7 +53,7 @@ module.exports = {
   getResults(keyword, page) {
     var deferred = Q.defer()
     osmosis
-    .get(this.baseUrl + keyword + 'page=' + page)
+    .get(this.baseUrl + '~PG-' + page + '?KW=' + keyword)
     .set({
       products: [osmosis.find(this.itemSelector).set(this.itemDataSelectors)]
     })

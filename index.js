@@ -17,8 +17,8 @@ program.version(pjson.version)
 program.on('--help', function(){
   console.log('  Examples:')
   console.log('')
-  console.log('    $ ' + pjson.name + ' mobile')
-  console.log('    $ ' + pjson.name + ' mobile 3')
+  console.log('    $ ' + pjson.name + ' grass')
+  console.log('    $ ' + pjson.name + ' grass 3')
   console.log('')
 });
 
